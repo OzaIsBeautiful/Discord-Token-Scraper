@@ -19,7 +19,7 @@ pip install requests
 2. Remplacer `TON_TOKEN_ICI` dans le script par le token récupéré.
 3. Exécuter le script :
    ```bash
-   python script.py
+   python token_scraper.py
    ```
 4. Suivre les instructions pour stocker les fichiers JSON des données extraites.
 
