@@ -1,53 +1,39 @@
-# Token Discord Scraper
+# Discord Token Scraper
 
 ## Description
-Ce script permet d'extraire des informations depuis un compte Discord à l'aide d'un token d'authentification. Il récupère diverses données telles que :
+Ce script permet d'extraire diverses données d'un compte Discord en utilisant son token d'authentification. Il récupère des informations comme les amis, les serveurs, les messages privés et les transactions.
 
-- Les informations de l'utilisateur
-- La liste des serveurs et des amis
-- Les connexions et sessions actives
-- Les messages privés et de serveurs
-- Les informations de facturation et abonnements Nitro
+⚠️ **Attention** : L'utilisation de ce script pour accéder aux données d'un compte sans l'autorisation du propriétaire est strictement interdite par les conditions d'utilisation de Discord et peut entraîner un bannissement du compte ou des conséquences légales.
 
-**⚠️ Ce script est à des fins éducatives uniquement. L'utilisation non autorisée d'un token Discord viole les conditions d'utilisation de Discord et peut entraîner un bannissement du compte concerné.**
-
----
+## Prérequis
+- Python 3
+- Bibliothèque `requests`
 
 ## Installation
-### Prérequis
-- Python 3.x
-- `requests`
-
-### Installation des dépendances
 ```bash
 pip install requests
 ```
 
-### Configuration
-Modifie la variable `TOKEN` dans le script avec le token du compte Discord concerné :
-```python
-TOKEN = "TON_TOKEN_ICI"
-```
-
----
-
 ## Utilisation
-1. Exécute le script en ligne de commande :
-```bash
-python script.py
-```
-2. Saisis le nom du dossier où seront stockées les données JSON.
-3. Le script récupérera les informations et les enregistrera sous forme de fichiers JSON dans le dossier spécifié.
+1. Récupérer le token de session Discord.
+2. Remplacer `TON_TOKEN_ICI` dans le script par le token récupéré.
+3. Exécuter le script :
+   ```bash
+   python script.py
+   ```
+4. Suivre les instructions pour stocker les fichiers JSON des données extraites.
 
----
+## Problèmes courants
+### Erreur 401: Unauthorized
+- Assurez-vous que le token utilisé est valide et actif.
+- Vérifiez que la session Discord est bien connectée sur l'appareil utilisé.
+- Discord peut invalider un token s'il est utilisé depuis un autre appareil/IP.
+- Essayer d'utiliser le même User-Agent que celui du navigateur pour éviter d'être bloqué.
 
-## Avertissement ⚠️
-L'extraction de données sans autorisation peut être considérée comme une violation des conditions d'utilisation de Discord. **Ce projet est uniquement destiné à un usage éducatif et personnel.**
+### Erreur 404: Not Found
+- Le token peut être invalide ou expiré.
+- L'API peut avoir changé ou la requête est mal formatée.
 
-L'auteur ne sera en aucun cas responsable d'un usage illégal de ce script.
-
----
-
-## Licence
-MIT License
+## Avertissement
+L'utilisation de ce script peut entraîner des risques pour votre compte. Discord peut révoquer votre token ou suspendre votre compte en cas d'abus. Ce projet est uniquement à des fins éducatives.
 
